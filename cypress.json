@@ -1,0 +1,5 @@
+{
+    "testFiles": "**/*.feature",
+    "baseUrl": "http://localhost:4200",
+    "pluginsFile": "./cypress/plugins/index.ts"
+}
