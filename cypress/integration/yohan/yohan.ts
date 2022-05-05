@@ -17,11 +17,6 @@ And(/enregistre/, (name: string) => {
 });
 
 Then(/la liste des heros est la suivante/, (herosTable: DataTable) => {
-    console.log('1');
-    console.log(herosTable.raw());
-    console.log(herosTable.rows());
-    console.log('é');
-    console.log(herosTable.hashes());
     cy.get('[data-test="hero-link"]').each((e, i) => {
         console.log(herosTable.hashes()[i]);
         cy.wrap(e).should('have.text', herosTable.hashes()[i].heros);
